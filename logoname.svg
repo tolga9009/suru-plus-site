@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="40" width="220">
+  <defs>
+    <linearGradient id="fitdance" x1="75.0478" x2="75.1913" y1="-17.0359" y2="77.3107">
+        <stop stop-color="#1AD6AB"/>
+        <stop offset="1" stop-color="#329DB6"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="30" fill="url(#fitdance)" font-family="Overpass" font-size="32px" font-weight="900">
+      Suru++ Family
+  </text>
+</svg>
