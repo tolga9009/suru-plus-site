@@ -1,8 +1,3 @@
-:root
-{
-	--overpass: Overpass, sans-serif;
-}
-
 @font-face
 {
 	font-family: "Overpass";
@@ -59,6 +54,11 @@
 	src: url("../fonts/Open source – Overpass Heavy.otf") format("opentype");
 }
 
+:root
+{
+	--overpass: Overpass, sans-serif;
+}
+
 /* null margins and padding to give good cross-browser baseline */
 body, caption, div, fieldset, form, caption, h1, h2, h3, h4, h5, h6, hr, html, img, li, ol,  p, svg, table, td, th, tr, ul
 {
@@ -99,7 +99,7 @@ body
 {
 	background: #eeffee;
 	font-family: var(--overpass);
-	font-size: 100%/150%;
+	font-size: 16px;
 	font-style: normal;
 	font-weight: 300;
 }
@@ -165,7 +165,6 @@ li
 
 p 
 {
-	font-size: 16px;
 	hyphens: auto;
 	text-align: justify;
 }
