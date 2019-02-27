@@ -77,7 +77,9 @@ body, caption, div, fieldset, form, caption, h1, h2, h3, h4, h5, h6, hr, html, i
 
 a
 {
-	color: #00acbc;
+	background: linear-gradient(to bottom, #1ad6ab, #00c9b7, #00bbbd, #00acbc, #329db6);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 	font-weight: 800;
 	text-decoration: none;
 }
@@ -158,6 +160,13 @@ h1, h2, h3, h4, h5, h6, p, ul
 	padding: 16px 24px;
 }
 
+h1, h2, h3
+{
+	background-image: linear-gradient(to top, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 li
 {
 	list-style-position: inside;
@@ -235,7 +244,11 @@ p
 
 #footer 
 {
+	background: linear-gradient(to bottom, #1ad6ab, #00c9b7, #00bbbd, #00acbc, #329db6);
+	color: #efefef;
+	font-weight: 700;
 	padding: 1em;
+	text-align: center;
 }
 
 #menuShowHide 
