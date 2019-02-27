@@ -44,15 +44,74 @@ let medium =
 
 let white =
 [
- "linear-gradient(180deg, hsl(0, 0%, 87.1%) 0%, hsl(0, 0%, 63.1%) 100%)",
- "linear-gradient(180deg, hsl(46.4, 13.3%, 75.1%) 0%, hsl(43.5, 13.2%, 62.9%) 100%)",
- "linear-gradient(180deg, hsl(78.2, 35.2%, 85.5%) 0%, hsl(80.4, 20.3%, 76.9%) 100%)",
- "linear-gradient(180deg, hsl(180, 1.6%, 75.3%) 0%, hsl(210, 7.8%, 94.9%) 100%)",
- "linear-gradient(180deg, hsl(197.1, 13%, 89.2%) 0%, hsl(201.8, 11.1%, 80.2%) 100%)",
- "linear-gradient(180deg, hsl(203.1, 8.1%, 76.1%) 0%, hsl(228, 3.2%, 69.2%) 100%)"
-]
+ "linear-gradient(180deg, #DEDEDE 0%, #A1A1A1 100%)",
+ "linear-gradient(180deg, #C8C4B7 0%, #ADA694 100%)",
+ "linear-gradient(180deg, #D9D8D3 0%, #C9C8C3 100%)",
+ "linear-gradient(180deg, #F0EDD9 0%, #E1DECB 100%)",
+ "linear-gradient(180deg, #DFE7CD 0%, #C8D0B8 100%)",
+ "linear-gradient(180deg, #F2FFE8 0%, #D2DECA 100%)",
+ "linear-gradient(180deg, #DDFFE5 0%, #BDDAC4 100%)",
+ "linear-gradient(180deg, #BFC1C1 0%, #F1F2F3 100%)",
+ "linear-gradient(180deg, #E0E5E7 0%, #C7CED2 100%)",
+ "linear-gradient(180deg, #BDC3C7 0%, #AEAFB3 100%)",
+];
 
-function attachNewNode(target, normal, medium, white) 
+let bright =
+[
+  "linear-gradient(180deg, #D1391F 0%, #FF0000 100%)",
+  "linear-gradient(180deg, #D1571F 0%, #FF2A00 100%)",
+  "linear-gradient(180deg, #D1751F 0%, #FF5500 100%)",
+  "linear-gradient(180deg, #D1931F 0%, #FF7F00 100%)",
+  "linear-gradient(180deg, #D1B01F 0%, #FFAA00 100%)",
+  "linear-gradient(180deg, #D1CE1F 0%, #FFD500 100%)",
+  "linear-gradient(180deg, #7BD11F 0%, #AAFF00 100%)",
+  "linear-gradient(180deg, #3FD11F 0%, #55FF00 100%)",
+  "linear-gradient(180deg, #1FD139 0%, #00FF00 100%)",
+  "linear-gradient(180deg, #1FD175 0%, #00FF55 100%)",
+  "linear-gradient(180deg, #1FD1B0 0%, #00FFAA 100%)",
+  "linear-gradient(180deg, #1FB6D1 0%, #00FFFF 100%)",
+  "linear-gradient(180deg, #1F5DD1 0%, #007FFF 100%)",
+  "linear-gradient(180deg, #B01FD1 0%, #AA00FF 100%)",
+  "linear-gradient(180deg, #D11FB6 0%, #FF00FF 100%)",
+  "linear-gradient(180deg, #D11F7B 0%, #FF00AA 100%)",
+  "linear-gradient(180deg, #D11F3F 0%, #FF0055 100%)",
+  "linear-gradient(180deg, #D12B1F 0%, #FF0015 100%)"
+];
+
+let cyberpunk =
+[
+  "linear-gradient(180deg, #00CCDA 0%, #0083FF 14.29%, #007AF9 28.57%, #0060E8 42.86%, #005FE7 57.14%, #2639AD 71.43%, #401E84 85.71%, #4A1475 100%)",
+  "linear-gradient(180deg, #D1313E 0%, #A9344F 50%, #6B3274 100%)",
+  "linear-gradient(180deg, #AD4F8D 0%, #6B8CCB 100%)",
+  "linear-gradient(180deg, #E6548B 0%, #F76363 100%)",
+  "linear-gradient(180deg, #46A926 0%, #009A56 100%)",
+  "linear-gradient(180deg, #FF4500 0%, #DC153B 100%)",
+  "linear-gradient(180deg, #00F260 0%, #0575E6 100%)",
+  "linear-gradient(180deg, #D0391F 0%, #FF005D 100%)",
+  "linear-gradient(179.86deg, #1AD6AB 0.08%, #329DB6 100.2%)",
+  "linear-gradient(180deg, #16A085 0%, #663579 100%)",
+  "linear-gradient(360deg, #957552 0%, #B29373 100%)",
+  "linear-gradient(360deg, rgba(197, 141, 103, 0.996078) 0%, rgba(230, 170, 129, 0.996078) 100%)",
+  "linear-gradient(360deg, #5B2F00 0%, #FF8000 100%)",
+  "linear-gradient(0deg, #037164 0%, #00AC98 100%)",
+  "linear-gradient(180deg, #EDC268 0%, #9B7424 100%)",
+  "linear-gradient(179.83deg, #07B3FF 0.51%, #007DE8 99.64%)",
+  "linear-gradient(180deg, #01BCC7 0%, #2954EF 100%)",
+  "linear-gradient(179.43deg, #FFEB00 0.56%, #FFA100 100.58%)",
+  "linear-gradient(180deg, #A6D74F 0%, #76C22B 100%)",
+  "linear-gradient(180deg, #79DD00 0%, #6DDB0A 10%, #61D915 20%, #55D620 30%, #49D42B 40%, #3CD235 50%, #30CF40 60%, #24CD4B 70%, #18CA56 80%, #0CC861 90%, #00C66B 100%)",
+  "linear-gradient(0deg, #FF0056 0%, #FF0C4E 10%, #FF1845 20%, #FF243D 30%, #FF3034 40%, #FF3C2B 50%, #FF4823 60%, #FF541A 70%, #FF6012 80%, #FF6C09 90%, #FF7901 100%)",
+  "linear-gradient(180deg, #FF6E00 0%, #EF002B 100%)",
+  "linear-gradient(180deg, #00A7FD 0%, #9914DC 100%)",
+  "linear-gradient(180deg, #141414 0%, #28000E 100%)",
+  "linear-gradient(180deg, #141414 0%, #003C21 100%)",
+  "linear-gradient(180deg, #280007 0%, #3C000A 100%)",
+  "linear-gradient(180deg, #230028 0%, #5C0F7D 100%)",
+  "linear-gradient(360deg, #000828 0%, #040F38 100%)",
+  "linear-gradient(180deg, #494B43 0%, #31332D 100%)"
+];
+
+function attachNewNode(target, normal, medium, bright, white, cyberpunk) 
 {
   let length = normal.length;
   for (let i = 0; i < length; i++) 
@@ -65,4 +124,6 @@ function attachNewNode(target, normal, medium, white)
 }
 attachNewNode(document.getElementById("normal-colours"), normal);
 attachNewNode(document.getElementById("medium-colours"), medium);
+attachNewNode(document.getElementById("bright-colours"), bright);
+attachNewNode(document.getElementById("cyberpunk-colours"), cyberpunk);
 attachNewNode(document.getElementById("white-colours"), white);

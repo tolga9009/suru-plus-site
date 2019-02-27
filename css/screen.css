@@ -40,6 +40,49 @@ body
 	font: normal 100%/150% Overpass, sans-serif;
 }
 
+code 
+{
+    padding: 2px 4px;
+    color: #c0341d;
+    background-color: #fbe5e1;
+    border-radius: 4px;
+}
+
+.gfm-color_chip 
+{
+  display: inline-block;
+  line-height: 1;
+  margin: 0 0 5px 4px;
+  margin-top: 0px;
+  vertical-align: middle;
+  border-radius: 3px;
+  width: 0.9em;
+  height: 0.9em;
+  background: #fff;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-image: none;
+  background-size: auto;
+  background-image: linear-gradient(135deg, #e1e1e1 25%, transparent 0%, transparent 75%, #e1e1e1 0%),linear-gradient(135deg, #e1e1e1 25%, transparent 0%, transparent 75%, #e1e1e1 0%);
+  background-size: 1em 1em;
+  background-position: 0 0, 0.5em 0.5em;
+}
+
+.gfm-color_chip 
+{
+    line-height: 1;
+}
+
+.gfm-color_chip > span 
+{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+
 fieldset, img 
 {
 	border: none;
