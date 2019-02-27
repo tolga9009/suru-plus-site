@@ -1,5 +1,66 @@
+:root
+{
+	--overpass: Overpass, sans-serif;
+}
+
+@font-face
+{
+	font-family: "Overpass";
+	font-style: normal;
+	font-weight: 300;
+	src: url("../fonts/Open source – Overpass Light.otf") format("opentype");
+}
+
+@font-face
+{
+	font-family: "Overpass";
+	font-style: italic;
+	font-weight: 300;
+	src: url("../fonts/Open source – Overpass Light Italic.otf") format("opentype");
+}
+
+@font-face
+{
+	font-family: "Overpass";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/Open source – Overpass Bold.otf") format("opentype");
+}
+
+@font-face
+{
+	font-family: "Overpass";
+	font-style: italic;
+	font-weight: 700;
+	src: url("../fonts/Open source – Overpass Bold Italic.otf") format("opentype");
+}
+
+@font-face
+{
+	font-family: "Overpass";
+	font-style: normal;
+	font-weight: 800;
+	src: url("../fonts/Open source – Overpass Extrabold.otf") format("opentype");
+}
+
+@font-face
+{
+	font-family: "Overpass";
+	font-style: italic;
+	font-weight: 800;
+	src: url("../fonts/Open source – Overpass Extrabold Italic.otf") format("opentype");
+}
+
+@font-face
+{
+	font-family: "Overpass";
+	font-style: normal;
+	font-weight: 900;
+	src: url("../fonts/Open source – Overpass Heavy.otf") format("opentype");
+}
+
 /* null margins and padding to give good cross-browser baseline */
-body, caption, div, fieldset, form, caption, hr, html, img, li, ol, svg, table, td, th, tr
+body, caption, div, fieldset, form, caption, h1, h2, h3, h4, h5, h6, hr, html, img, li, ol,  p, svg, table, td, th, tr, ul
 {
 	margin: 0px;
 	padding: 0px;
@@ -37,7 +98,10 @@ b
 body 
 {
 	background: #eeffee;
-	font: normal 100%/150% Overpass, sans-serif;
+	font-family: var(--overpass);
+	font-size: 100%/150%;
+	font-style: normal;
+	font-weight: 300;
 }
 
 code 
@@ -102,7 +166,6 @@ li
 p 
 {
 	font-size: 16px;
-	font-weight: 300;
 	hyphens: auto;
 	text-align: justify;
 }
@@ -151,7 +214,9 @@ p
 .title
 {
 	background: linear-gradient(to bottom, #1ad6ab, #00c9b7, #00bbbd, #00acbc, #329db6);
-	font: bold 150%/70%;
+	font-style: normal;
+	font-size: 150%/70%;
+	font-weight: 900;
 	text-align: left;
 	padding: 0.5em;
 	-webkit-background-clip: text;
@@ -258,7 +323,7 @@ p
 		background: linear-gradient(179.86deg, #1AD6AB 0.08%, #329DB6 100.2%);
 		color: #efefef;
 		display: block;
-		font-weight: bold;
+		font-weight: 700;
 		margin-bottom: 1em;
 		padding: 1em;
 		text-align: center;
