@@ -78,6 +78,7 @@ body, caption, div, fieldset, form, caption, h1, h2, h3, h4, h5, h6, hr, html, i
 a
 {
 	background: linear-gradient(to bottom, #1ad6ab, #00c9b7, #00bbbd, #00acbc, #329db6);
+	background-clip: text;
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 	font-weight: 800;
@@ -88,6 +89,7 @@ a:hover
 {
 	background-image: linear-gradient(to top, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
 	font-weight: 800;
+	background-clip: text;
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -104,49 +106,8 @@ body
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 300;
-}
-
-code 
-{
-    padding: 2px 4px;
-    color: #c0341d;
-    background-color: #fbe5e1;
-    border-radius: 4px;
-}
-
-.gfm-color_chip 
-{
-  display: inline-block;
-  line-height: 1;
-  margin: 0 0 5px 4px;
-  margin-top: 0px;
-  vertical-align: middle;
-  border-radius: 3px;
-  width: 0.9em;
-  height: 0.9em;
-  background: #fff;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  background-image: none;
-  background-size: auto;
-  background-image: linear-gradient(135deg, #e1e1e1 25%, transparent 0%, transparent 75%, #e1e1e1 0%),linear-gradient(135deg, #e1e1e1 25%, transparent 0%, transparent 75%, #e1e1e1 0%);
-  background-size: 1em 1em;
-  background-position: 0 0, 0.5em 0.5em;
-}
-
-.gfm-color_chip 
-{
-    line-height: 1;
-}
-
-.gfm-color_chip > span 
-{
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 2px;
-  border-radius: 3px;
-  border: 1px solid rgba(0,0,0,0.3);
+	margin: 0 auto;
+	width: 100%;
 }
 
 fieldset, img 
@@ -163,19 +124,50 @@ h1, h2, h3, h4, h5, h6, p, ul
 h1, h2, h3
 {
 	background-image: linear-gradient(to top, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
+	background-clip: text;
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-li
+li 
 {
-	list-style-position: inside;
+	hyphens: auto;
+	-ms-hyphens: auto; 
+	-webkit-hyphens: auto;
+  padding-left: 1em; 
+  text-indent: -.7em;
+	text-align: justify;
+}
+
+li:before 
+{
+	background: linear-gradient(to bottom, #1ad6ab, #00c9b7, #00bbbd, #00acbc, #329db6);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  content: "✱";
+  margin-right: 4px;
 }
 
 p 
 {
 	hyphens: auto;
+	-ms-hyphens: auto; 
+	-webkit-hyphens: auto;
 	text-align: justify;
+}
+
+ul 
+{
+    list-style: none;
+}
+
+.color
+{
+	border-radius: 50%;
+	margin-right: 3px;
+	padding-left: 8px;
+	padding-right: 8px;
 }
 
 .container 
@@ -244,9 +236,14 @@ p
 
 #footer 
 {
-	background: linear-gradient(to bottom, #1ad6ab, #00c9b7, #00bbbd, #00acbc, #329db6);
-	color: #efefef;
-	font-weight: 700;
+	background: linear-gradient(#49535E, #2F3943);
+	border-top: 4px solid transparent;
+  border-image: linear-gradient(to right, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
+  -moz-border-image: -moz-linear-gradient(to right, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
+  -webkit-border-image: -webkit-linear-gradient(to right, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
+  border-image-slice: 1;
+	color: #fff;
+	font-size: 10px;
 	padding: 1em;
 	text-align: center;
 }
@@ -274,7 +271,15 @@ p
 #mainMenu li 
 {
 	display: inline;
+	text-align: center;
 	padding: 0px;
+}
+
+#mainMenu li:before 
+{
+	background: none;
+  content: none;
+  margin-right: none;
 }
 
 #mainMenu a 
@@ -292,6 +297,7 @@ p
 #mainMenu a:hover 
 {
 	background-image: linear-gradient(to top, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
+	background-clip: text;
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -321,6 +327,11 @@ p
 		float: left;
 		width: 50%;
 		padding: 0px;
+	}
+
+	#mainMenu ul 
+	{
+	  list-style: none;
 	}
 
 	#mainMenu a 
