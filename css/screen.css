@@ -108,11 +108,6 @@ body
 	font-weight: 300;
 }
 
-body, html
-{
-	margin: 0 auto;
-}
-
 fieldset, img 
 {
 	border: none;
@@ -234,6 +229,8 @@ ul
 #top 
 {
 	background: #FFF;
+	max-width: 100%;
+	height: 100%;
 	margin: 0 auto;
 }
 
@@ -246,7 +243,7 @@ ul
   -webkit-border-image: -webkit-linear-gradient(to right, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
   border-image-slice: 1;
 	color: #fff;
-	font-size: 10px;
+	font-size: 12px;
 	padding: 1em;
 	text-align: center;
 }
