@@ -129,9 +129,10 @@ h1, h2, h3
 
 li 
 {
-	hyphens: auto;
-	-ms-hyphens: auto; 
-	-webkit-hyphens: auto;
+  hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
   padding-left: 1em; 
   text-indent: -.7em;
 	text-align: justify;
@@ -149,9 +150,10 @@ li:before
 
 p 
 {
-	hyphens: auto;
-	-ms-hyphens: auto; 
-	-webkit-hyphens: auto;
+  hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
 	text-align: justify;
 }
 
