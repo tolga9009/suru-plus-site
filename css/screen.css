@@ -82,6 +82,10 @@
 	--css-tricks-right: linear-gradient(to right, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
 	--css-tricks-top: linear-gradient(to top, #ff0056, #ff3146, #ff4c34, #ff6421, #ff7901);
 	--fitdance-bottom: linear-gradient(to bottom, #1ad6ab, #00c9b7, #00bbbd, #00acbc, #329db6);
+
+	/* Code colours */
+	--fitdance-light-webkit: -webkit-gradient(linear,left top, right top, from(#b9ffee), to(#b9f4ff));
+	--fitdance-light: linear-gradient(to right, #b9ffee, #b9f4ff);
 }
 
 * 
@@ -136,6 +140,19 @@ code
 	word-wrap: break-word;
 }
 
+.code-alt 
+{
+	-webkit-box-decoration-break: clone;
+	background: var(--papirus);
+	border-radius: .2rem;
+	box-decoration-break: clone;
+	color: var(--papirus-light);
+	font-size: 90%;
+	overflow-wrap: break-word;
+	padding: .1rem .3rem .2rem;
+	word-wrap: break-word;
+}
+
 body 
 {
 	background: var(--papirus-light);
@@ -160,6 +177,14 @@ h1, h2, h3, h4, h5, h6, p, ul
 h1, h2, h3
 {
 	background-image: var(--css-tricks-top);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h4
+{
+	background-image: var(--fitdance-bottom);
 	background-clip: text;
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -200,6 +225,146 @@ p
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
 	text-align: justify;
+}
+
+table 
+{
+  background: white;
+  border-collapse: collapse;
+  border-radius: 6px;
+  border-spacing: 1;
+  margin: 0 auto;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+table * 
+{
+  position: relative;
+}
+
+table td, table th 
+{
+  padding-left: 8px;
+}
+
+table thead tr 
+{
+  background: var(--fitdance);
+	color: var(--papirus-light);
+  font-size: 16px;
+  height: 60px;
+}
+
+table tbody tr 
+{
+  border-bottom: 1px solid #E3F1D5;
+  height: 48px;
+}
+
+table tbody tr td:first-child 
+{
+	background-image: var(--css-tricks-top);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+table tbody tr:last-child 
+{
+  border: 0;
+}
+
+table td, table th 
+{
+  text-align: left;
+}
+
+table td.l, table th.l 
+{
+  text-align: right;
+}
+
+table td.c, table th.c 
+{
+  text-align: center;
+}
+
+table td.r, table th.r 
+{
+  text-align: center;
+}
+
+@media screen and (max-width: 35.5em) 
+{
+  table 
+	{
+    display: block;
+  }
+
+  table > *, table tr, table td, table th 
+	{
+    display: block;
+  }
+
+  table thead 
+	{
+    display: none;
+  }
+
+  table tbody tr 
+	{
+    height: auto;
+    padding: 8px 0;
+  }
+
+  table tbody tr td 
+	{
+    margin-bottom: 12px;
+    padding-left: 45%;
+  }
+
+  table tbody tr td:last-child 
+	{
+    margin-bottom: 0;
+  }
+
+  table tbody tr td:before 
+	{
+    font-weight: 700;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 40%;
+  }
+
+  table tbody tr td:nth-child(1):before 
+	{
+    content: "Code";
+  }
+
+  table tbody tr td:nth-child(2):before 
+	{
+    content: "Stock";
+  }
+
+  table tbody tr td:nth-child(3):before 
+	{
+    content: "Cap";
+  }
+
+  table tbody tr td:nth-child(4):before 
+	{
+    content: "Inch";
+  }
+
+  table tbody tr td:nth-child(5):before 
+	{
+    content: "Box Type";
+  }
 }
 
 ul 
@@ -311,7 +476,7 @@ ul.grid li span
  ul.grid li:after 
  {
   border: none;
-  color: #d9dde0;
+  color: var(--papirus-dark);
   content:"◆";
   display: block;
   text-align: center;
