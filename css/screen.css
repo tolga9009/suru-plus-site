@@ -158,9 +158,13 @@ body
 	background: var(--papirus-light);
 	color: var(--papirus-dark);
 	font-family: var(--overpass);
-	font-size: 16px;
 	font-style: normal;
 	font-weight: 300;
+}
+
+body, li, p, ul
+{
+	font-size: 16px !important;
 }
 
 fieldset, img 
@@ -182,12 +186,33 @@ h1, h2, h3
   -webkit-text-fill-color: transparent;
 }
 
+h1
+{
+	font-size: 32 !important;
+}
+
+h2
+{
+	font-size: 28px !important;
+}
+
+h3
+{
+	font-size: 24px !important;
+}
+
 h4
 {
 	background-image: var(--fitdance-bottom);
 	background-clip: text;
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+	font-size: 20px !important;
+}
+
+h5
+{
+	font-size: 18px !important;
 }
 
 img 
@@ -348,17 +373,17 @@ table td.r, table th.r
 
   table tbody tr td:nth-child(2):before 
 	{
-    content: "Stock";
+    content: "Blur";
   }
 
   table tbody tr td:nth-child(3):before 
 	{
-    content: "Cap";
+    content: "Drop shadow";
   }
 
   table tbody tr td:nth-child(4):before 
 	{
-    content: "Inch";
+    content: "Inner shadow";
   }
 
   table tbody tr td:nth-child(5):before 
@@ -377,7 +402,7 @@ ul
 	margin: 0 auto;
 	margin-left: auto;
 	margin-right: auto;
-	text-align:center;
+	text-align: center;
 }
 
 ul.grid 
@@ -570,7 +595,7 @@ ul.grid li span
 	border-top: 4px solid transparent;
   border-image: var(--css-tricks-right);
   border-image-slice: 1;
-	color: #fff;
+	color: var(--papirus-light);
 	font-size: 12px;
 	padding: 1em;
 	text-align: center;
