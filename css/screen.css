@@ -54,9 +54,18 @@
 	src: url("../fonts/Open source – Overpass Heavy.otf") format("opentype");
 }
 
+@font-face
+{
+	font-family: "Line Awesome";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/line-awesome.woff") format("woff");
+}
+
 :root
 {
 	/* Fonts */
+	--line-awesome: 'Line Awesome';
 	--overpass: Overpass, sans-serif;
 
 	/* Gradient Colours */
@@ -97,7 +106,7 @@
 
 
 /* null margins and padding to give good cross-browser baseline */
-body, caption, div, fieldset, form, caption, h1, h2, h3, h4, h5, h6, hr, html, img, li, ol,  p, svg, table, td, th, tr, ul
+body, caption, details, div, fieldset, form, caption, h1, h2, h3, h4, h5, h6, hr, html, img, li, ol,  p, summary, svg, table, td, th, tr, ul
 {
 	margin: 0px;
 	padding: 0px;
@@ -167,6 +176,89 @@ body, li, p, ul
 	font-size: 16px !important;
 }
 
+details
+{
+	background: whitesmoke;
+	border-bottom: 2px solid var(--papirus-dark);
+	border-radius: 5px;
+	max-width: 90%; 
+	margin: 0px auto;
+	padding: 6px 24px;
+}
+
+@media (max-width: 38em)
+{
+	details
+	{
+		border-radius: 0px;
+		max-width: 100%;
+	}
+}
+
+details summary
+{
+	background-image: var(--css-tricks-top);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	cursor: pointer;
+	font-size: 28px !important;
+	font-weight: 900;
+	list-style: none;
+}
+
+details summary::-webkit-details-marker 
+{
+  display: none;
+}
+
+details summary:before
+{
+	background-image: var(--fitdance);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	content: '';
+	font-family: var(--line-awesome);
+	padding-right: 10px;
+}
+
+details[open] summary:before 
+{
+  content: '';
+}
+
+details > details
+{
+	border: none;
+	max-width: 100%;
+}
+
+details > details summary
+{
+	background-image: var(--fitdance);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	font-size: 24px !important;
+	font-weight: 900;
+}
+
+details > details summary:before
+{
+	background-image: var(--css-tricks-top);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	content: '' !important;
+	padding-right: 10px;
+}
+
+details > details[open] summary:before 
+{
+  content: '' !important;
+}
+
 fieldset, img 
 {
 	border: none;
@@ -221,6 +313,29 @@ img
     image-rendering: optimizequality;
 }
 
+img.mint-folders
+{
+	width: 600px;
+}
+
+img.file-managers
+{
+	width: 290px;
+}
+
+img.steam-games
+{
+	width: 216px;
+}
+
+@media (max-width: 38em)
+{
+	.file-managers, .mint-folders, .steam-games
+	{
+		width: 100%;
+	}
+}
+
 li 
 {
   hyphens: auto;
@@ -240,6 +355,21 @@ li:before
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   content: "✱";
+  margin-right: 4px;
+}
+
+li > ul
+{
+	padding: 0px;
+}
+
+li > ul li:before
+{
+	background: var(--css-tricks-top);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	content: "✱";
   margin-right: 4px;
 }
 
@@ -394,8 +524,10 @@ table td.r, table th.r
 
 ul 
 {
-    list-style: none;
+  list-style: none;
 }
+
+/* Centralise the grid of icons sets */
 
 .center
 {
@@ -405,14 +537,35 @@ ul
 	text-align: center;
 }
 
-ul.grid 
+.colour
+{
+	border-radius: 100%;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+}
+
+.container-colours-sets
+{
+	background: var(--papirus-dark);
+	border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50px);
+	margin-left: 24px;
+	margin-right: 24px;
+}
+
+/* Grid of icons sets */
+
+.grid 
 {
 	list-style: none;
 	margin: 0 auto;
 	padding: 0;
 }
 
-ul.grid li 
+.grid li 
 {
 		background: -webkit-gradient(linear,left top, right top, from(#fce4ed), to(#ffe8cc));
 		background: linear-gradient(to right, #fce4ed, #ffe8cc);
@@ -435,13 +588,13 @@ ul.grid li
     -o-transition: all 100ms ease-out;
 }
 
-ul.grid li:before
+.grid li:before
 {
   content: none;
   margin-right: none;
 }
 
-ul.grid li:focus, ul.grid li:hover 
+.grid li:focus, .grid li:hover 
 {
   box-shadow: 0 1px 2px 0 rgba(10.2%, 83.9%, 67.1%, 0.5), 0 0 1px 2px rgba(19.6%, 61.6%, 71.4%, 0.5);
 	transition: all 100ms ease-out;
@@ -451,13 +604,13 @@ ul.grid li:focus, ul.grid li:hover
 	-o-transition: all 100ms ease-out;
 }
 
-ul.grid li img 
+.grid li img 
 {
     border-radius: 4px;
     margin-bottom: 12px;
 }
 
-ul.grid li span 
+.grid li span 
 {
     display: inline-block;
     color: gray;
@@ -471,7 +624,7 @@ ul.grid li span
 
 @media only screen and (max-width: 848px) 
 {
- ul.grid 
+ .grid 
  {
   text-align: center
  }
@@ -479,12 +632,12 @@ ul.grid li span
 
 @media only screen and (max-width: 440px) 
 {
- ul.grid 
+ .grid 
  {
   text-align: center
  }
 
- ul.grid li 
+ .grid li 
  {
   background: transparent;
   border-radius: 0;
@@ -498,7 +651,7 @@ ul.grid li span
   width: 100%
  }
 
- ul.grid li:after 
+ .grid li:after 
  {
   border: none;
   color: var(--papirus-dark);
@@ -510,57 +663,43 @@ ul.grid li span
   width: 100%;
  }
 
- ul.grid li:last-child:after 
+ .grid li:last-child:after 
  {
   content:""
  }
 
- ul.grid li:focus, ul.grid li:hover 
+ .grid li:focus, ul.grid li:hover 
  {
   box-shadow: none;
   background: transparent
  }
 }
 
-.color
+.long-list
 {
-	border-radius: 100%;
-  height: 25px;
-  display: inline-block;
-  vertical-align: middle;
-  width: 25px;
+	columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 
-.container 
+.very-long-list
 {
-  display: grid;
-  grid-template-columns: repeat(15, 120px);
-  max-width: 100%;
-  width: auto;
+	columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
 }
 
-.container2 
+@media (max-width: 38em)
 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 120px);
+	.long-list, .very-long-list
+	{
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+	}
 }
 
-.container3 
-{
-	background: var(--papirus-dark);
-	border-radius: 5px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
-	margin-left: 24px;
-	margin-right: 24px;
-}
-
-.container4 
-{
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(12, 120px);
-}
+/* Grid of colours sets */
 
 .palette 
 {
@@ -589,6 +728,16 @@ ul.grid li span
 	background: var(--papirus);
 }
 
+.wrapper 
+{
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 48px;
+}
+
+/* Footer */
+
 #footer 
 {
 	background: var(--papirus);
@@ -612,6 +761,8 @@ ul.grid li span
 {
 	display: inline;
 }
+
+/* Menu */
 
 #menuShowHide 
 {
