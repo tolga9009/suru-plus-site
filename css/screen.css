@@ -149,6 +149,11 @@ code
 	word-wrap: break-word;
 }
 
+pre > code
+{
+	background: none;
+}
+
 .code-alt 
 {
 	-webkit-box-decoration-break: clone;
@@ -687,6 +692,11 @@ ul
 	columns: 4;
   -webkit-columns: 4;
   -moz-columns: 4;
+}
+
+.long-list li, .very-long-list li
+{
+	text-align: left;
 }
 
 @media (max-width: 38em)

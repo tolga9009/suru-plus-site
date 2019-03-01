@@ -1,0 +1,89 @@
+/* 
+
+Suru++ 25 Syntax (c) Suru++ Project
+Original theme - Ocean Dark Theme – by https://github.com/gavsiu
+
+*/
+
+/* FitDance Comment */
+.hljs-comment,
+.hljs-quote 
+{
+  color: #b9ffee;
+}
+
+/* Suru++ 20 official colour, based on El Captain */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion 
+{
+  color: #ff3146;
+}
+
+/* Suru++ 20 official colour based on Yosemite */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link 
+{
+  color: #ff7901;
+}
+
+/* 90s Summer */
+.hljs-attribute 
+{
+  color: #ff4c34;
+}
+
+/* FitDance Official Colour */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition 
+{
+  color: #329DB6;
+}
+
+/* Suru++ 20.1 official colour based on Mavericks */
+.hljs-title,
+.hljs-section 
+{
+  color: #00F260;
+}
+
+/* Suru-restyled Haguichi official colour */
+.hljs-keyword,
+.hljs-selector-tag 
+{
+  color: #F76363;
+}
+
+/* Papirus Icon Sets official dark and light colours */
+.hljs 
+{
+  border-radius: 5px;
+  display: block;
+  overflow-x: auto;
+  background: #252d35;
+  color: #ececec;
+  padding: 0.5em;
+}
+
+.hljs-emphasis 
+{
+  font-style: italic;
+}
+
+.hljs-strong 
+{
+  font-weight: bold;
+}
