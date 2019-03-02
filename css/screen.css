@@ -561,6 +561,16 @@ ul
 	margin-right: 24px;
 }
 
+.date
+{
+	color: var(--papirus-dark) !important;
+	font-size: 16px;
+	vertical-align: middle;
+	background-clip: none !important;
+	-webkit-background-clip: none !important;
+  -webkit-text-fill-color: none !important;
+}
+
 /* Grid of icons sets */
 
 .grid 
