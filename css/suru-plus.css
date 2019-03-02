@@ -78,6 +78,12 @@ Original theme - Ocean Dark Theme – by https://github.com/gavsiu
   padding: 0.5em;
 }
 
+.hljs-settings
+{
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
 .hljs-emphasis 
 {
   font-style: italic;

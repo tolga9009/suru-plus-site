@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" href="css/screen.css" media="screen">
+		<link rel="stylesheet" href="css/suru-plus.css">
+		<title>Suru++ – Instructions</title>
+		<script>
+	  var Hyphenopoly = 
+		{
+  		require: 
+			{
+      	"en-gb": "Supercalifragilisticexpialidocious"
+  		},
+      paths: 
+			{
+    		patterndir: "./javascript/patterns/"
+			},
+  		setup: 
+			{
+      	selectors: 
+				{
+          p: {},
+					ul: {}
+      	}
+  		}
+    };
+  	</script>
+		<script>hljs.initHighlightingOnLoad();</script>
+	</head>
+	<body>
+
+	<div class="title_back">
+		<h1 class="title">Changelog</h1>
+	</div>
+		
+		<input type="checkbox" id="menuShowHide">
+		<label for="menuShowHide"></label>
+		<ul id="mainMenu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="guidelines.html">Design Guidelines</a></li>
+			<li><a href="changelog.html">Changelog</a></li>
+			<li><a href="instructions.html">Instructions</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+
+		<details>
+			<summary>Suru++25</summary>
+
+			<p>Click one of contens in the index.</p>
+
+			<ul>
+				<li><a href="#installing-with-cli">Installing with CLI</a>
+					<ul>
+						<li><a href="#root-directory-recommended">ROOT directory (recommended)</a></li>
+						<li><a href="#home-directory-for-gtk">HOME directory for GTK</a></li>
+						<li><a href="#home-directory-for-kde">HOME directory for KDE</a></li>
+						<li><a href="#bsd-systems">*BSD systems</a></li>
+						<li><a href="#uninstall">Uninstall</a></li>
+					</ul>
+				</li>
+				<li><a href="#arch-linux-and-arch-based-distributions">Arch Linux and Arch-based distributions</a></li>
+			</ul>
+
+			<h3 id="installing-with-cli">Installing with CLI</h3>
+
+			<p>Use the scripts to install the latest version directly from this repo (independently of your distro):</p>
+			<p><strong>NOTE:</strong> Use the same command to update the icon theme.</p>
+
+		<h4 id="root-directory-recommended">ROOT directory (recommended)</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus/master/install.sh | sh
+</code></pre>
+
+		<h4 id="home-directory-for-gtk">HOME directory for GTK</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus/master/install.sh | env DESTDIR=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.icons"</span> sh
+</code></pre>
+
+		<h4 id="home-directory-for-kde">HOME directory for KDE</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus/master/install.sh | env DESTDIR=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.local/share/icons"</span> sh
+</code></pre>
+
+		<h4 id="bsd-systems">*BSD systems</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus/master/install.sh | env DESTDIR=<span class="hljs-string">"/usr/local/share/icons"</span> sh
+</code></pre>
+
+		<h4 id="uninstall">Uninstall</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus/master/install.sh | env uninstall=<span class="hljs-literal">true</span> sh
+</code></pre>
+
+    <h3 id="arch-linux-and-arch-based-distributions">Arch Linux and Arch-based distributions</h3>
+<pre class="hljs hljs-settings"><code class="language-bash">yay -S suru-plus-git
+</code></pre>
+		</details>
+
+		<details>
+			<summary>Suru++25 Dark</summary>
+
+			<p>Click one of contens in the index.</p>
+			
+			<ul>
+				<li><a href="#installing-with-cli">Installing with CLI</a>
+					<ul>
+						<li><a href="#root-directory-recommended">ROOT directory (recommended)</a></li>
+						<li><a href="#home-directory-for-gtk">HOME directory for GTK</a></li>
+						<li><a href="#home-directory-for-kde">HOME directory for KDE</a></li>
+						<li><a href="#bsd-systems">*BSD systems</a></li>
+						<li><a href="#uninstall">Uninstall</a></li>
+					</ul>
+				</li>
+				<li><a href="#arch-linux-and-arch-based-distributions">Arch Linux and Arch-based distributions</a></li>
+			</ul>
+
+			<h3 id="installing-with-cli">Installing with CLI</h3>
+
+			<p>Use the scripts to install the latest version directly from this repo (independently of your distro):</p>
+			<p><strong>NOTE:</strong> Use the same command to update the icon theme.</p>
+
+		<h4 id="root-directory-recommended">ROOT directory (recommended)</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | sh
+</code></pre>
+
+		<h4 id="home-directory-for-gtk">HOME directory for GTK</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | env DESTDIR=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.icons"</span> sh
+</code></pre>
+
+		<h4 id="home-directory-for-kde">HOME directory for KDE</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | env DESTDIR=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.local/share/icons"</span> sh
+</code></pre>
+
+		<h4 id="bsd-systems">*BSD systems</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | env DESTDIR=<span class="hljs-string">"/usr/local/share/icons"</span> sh
+</code></pre>
+
+		<h4 id="uninstall">Uninstall</h4>
+
+<pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | env uninstall=<span class="hljs-literal">true</span> sh
+</code></pre>
+
+    <h3 id="arch-linux-and-arch-based-distributions">Arch Linux and Arch-based distributions</h3>
+<pre class="hljs hljs-settings"><code class="language-bash">yay -S suru-plus-dark-git
+</code></pre>
+		</details>
+
+		<div id="footer">
+			© 2019 Suru++ by Suru++ Project and Andrea Bonanni<br/>
+			<ul id="footer-menu">
+			  <li><a href="about.html">About</a></li>
+			  <li><a href="contact.html">Contact</a></li>
+			  <li><a href="privacy.html">Privacy</a></li>
+			  <li><a href="colophon.html">Colophon</a></li>
+			</ul>
+			Made with &#x2764 and &#x2615 in &#x1F1E7&#x1F1F7 :-)
+		</div>
+
+		<script src="javascript/Hyphenopoly_Loader.js"></script>
+		<script src="javascript/highlight.pack.js"></script>
+	</body>
+</html>
