@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" href="css/screen.css" media="screen">
+		<title>Suru – Blog and News</title>
+		<script>
+	  var Hyphenopoly = 
+		{
+  		require: 
+			{
+      	"en-gb": "Supercalifragilisticexpialidocious"
+  		},
+      paths: 
+			{
+    		patterndir: "./javascript/patterns/"
+			},
+  		setup: 
+			{
+      	selectors: 
+				{
+          p: {}
+      	}
+  		}
+    };
+  	</script>
+		<script src="javascript/moment.js"></script>
+		<script>
+			moment.locale('en-gb');
+			moment.relativeTimeThreshold('d', 25);
+			moment.calendarFormat = function (myMoment, now) {
+				var diff = myMoment.diff(now, 'days', true);
+				var twoMonths = now.clone().subtract(2, 'month');
+				var nextMonth = now.clone().add(1, 'month');
+
+				var retVal = diff < -90 ? 'sameElse' :
+					(twoMonths.month() === myMoment.month() && twoMonths.year() === myMoment.year()) ? 'twoMonths' :
+						diff < -21 ? 'lastMonth' :
+							diff < -20 ? 'twentyDaysAgo' :
+								diff < -19 ? 'nineteenDaysAgo' :
+									diff < -18 ? 'eighteenDaysAgo' :
+										diff < -17 ? 'seventeenDaysAgo' :
+											diff < -16 ? 'sixteenDaysAgo' :
+												diff < -15 ? 'fiftenDaysAgo' :
+													diff < -14 ? 'fourteenDaysAgo' :
+														diff < -13 ? 'thirteenDaysAgo' :
+															diff < -12 ? 'twelveDaysAgo' :
+																diff < -11 ? 'elevenDaysAgo' :
+																	diff < -10 ? 'tenDaysAgo' :
+																		diff < -9 ? 'nineDaysAgo' :
+																			diff < -8 ? 'eightDaysAgo' :
+																				diff < -7 ? 'sevenDaysAgo' :
+																					diff < -6 ? 'sixDaysAgo' :
+																						diff < -1 ? 'lastWeek' :
+																							diff < 0 ? 'lastDay' :
+																								diff < 1 ? 'sameDay' :
+																									diff < 2 ? 'nextDay' :
+																										diff < 7 ? 'nextWeek' :
+																											// introduce thisMonth and nextMonth
+																											(myMoment.month() === now.month() && myMoment.year() === now.year()) ? 'thisMonth' :
+																												(nextMonth.month() === myMoment.month() && nextMonth.year() === myMoment.year()) ? 'nextMonth' : 'sameElse';
+				return retVal;
+			};
+
+			function ChooseDate(setDate)
+			{
+				result = moment(setDate, "YYYYMMDD").calendar(null,
+				{
+					sameElse: 'LL',
+					twoMonths: '[2 months ago]',
+					lastMonth: '[1 month ago]',
+					twentyDaysAgo: '[20 days ago]',
+					nineteenDaysAgo:  '[19 days ago]',
+					eighteenDaysAgo: '[18 days ago]',
+					seventeenDaysAgo: '[17 days ago]',
+					sixteenDaysAgo: '[16 days ago]',
+					fiftenDaysAgo: '[15 days ago]',
+					fourteenDaysAgo: '[14 days ago]',
+					thirteenDaysAgo: '[13 days ago]',
+					twelveDaysAgo: '[12 days ago]',
+					elevenDaysAgo: '[11 days ago]',
+					tenDaysAgo: '[10 days ago]',
+					nineDaysAgo: '[9 days ago]',
+					eightDaysAgo: '[8 days ago]',
+					sevenDaysAgo: '[7 days ago]',
+					sixDaysAgo: '[6 days ago]',
+					lastWeek: '[Last] dddd',
+					lastDay: '[Yesterday]',
+					sameDay: '[Today]',
+					nextDay: '[Tomorrow]',
+					nextWeek: 'dddd',
+					thisMonth: '[This month on the] Do',
+					nextMonth: '[Next month on the] Do'
+				});
+
+				return result;
+			}
+		</script>
+	</head>
+	<body>
+
+	<div class="title_back">
+		<h1 class="title">Suru++ Blog</h1>
+	</div>
+		
+		<input type="checkbox" id="menuShowHide">
+		<label for="menuShowHide"></label>
+		<ul id="mainMenu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="guidelines.html">Design Guidelines</a></li>
+			<li><a href="changelog.html">Changelog</a></li>
+			<li><a href="instructions.html">Instructions</a></li>
+			<li><a href="blog.html">Blog</a></li>
+		</ul>
+
+		<div class="blog-wrapper">
+  		<div class="blog-top"></div>
+
+			<div class="card-first">
+
+					<h2>Upgraded Suru++ 25 Dark!</h2>
+
+					<span class="date"><script>document.write(ChooseDate("20190213"))</script></span>
+
+					<p lang="en-gb">I have just upgraded the old Suru++ Dark from <a href="https://github.com/suru-plus/suru-plus">Suru++ 25</a>, stopped since <script>document.write(ChooseDate("20180618"))</script>! Yes, stopped for a long time, because I have focused on Suru++ 25 mainly, firstly and before all, so I could end all bugs that the original author of Suru++ Ubuntu failed to fix due to his fact of not being a developer or system analyst, after I could redesign the icons theme, to make it compatible with KDE, with new colours palette and new grid rules, based on Sam Hewitt's design guidelines and complete the icons theme.</p>
+      </div>
+
+			<div class="card-next">
+
+					<h2>The biggest update of Suru++... From 20 to 25!</h2>
+					<span class="date"><script>document.write(ChooseDate("20190127"))</script></span>
+
+					<p lang="en-gb">I have stopped this development since <script>document.write(ChooseDate("20181028"))</script> because I was extremely on my college and my thesis. I was very busy with writing a complicated crazy and long thesis, writing in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>, compiling via <span class="latex">X<sub class="revcap">e</sub>L<sup>a</sup>T<sub>e</sub>X</span>, using the extension <a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> Workshop</a> on VSCode Insiders, delivering my thesis until November 28. I introduced my thesis to my thesis advisor and to three invited professors on December 8.</p>
+
+					<p>Finally I am graduated! &#x1F468;&#x200D;&#x1F393; &#x1F389;</p>
+
+					<p lang="en-gb">I was really on holidays, but I could not return this job, because I had to rewrite at the request of my thesis advisor and three invited professors, delivering the DVD-RW until December 14. Just after December 15, I could return this job, but I could not release it, because firstly I had to wipe up everything to terminate the bugs, redesign and complete the icons theme. Redesigning four thousand seven hundred took two months to complete the icons theme with extinction of all bugs.</p>
+
+					<p lang="en-gb">Finally I have just released today... To know more what is news in the new version, you can check <a href="changelog.html">Changelog</a>.</p>
+      </div>
+
+			<div class="card-next">
+
+					<h2>Hey looks it's another post</h2>
+
+      		<p>18 October, 2014</p>
+
+      		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.  Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. <br /><br />Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi.</p>
+      </div>
+		</div>
+
+		<div id="footer">
+			© 2019 Suru++ by Suru++ Project and Andrea Bonanni<br/>
+			<ul id="footer-menu">
+			  <li><a href="about.html">About</a></li>
+			  <li><a href="licence.html">Licence</a></li>
+			  <li><a href="privacy.html">Privacy</a></li>
+			  <li><a href="colophon.html">Colophon</a></li>
+			</ul>
+			Made with &#x2764 and &#x2615 in &#x1F1E7&#x1F1F7 :-)
+		</div>
+
+	<script src="javascript/Hyphenopoly_Loader.js"></script>
+	</body>
+</html>
