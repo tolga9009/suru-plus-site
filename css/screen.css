@@ -569,6 +569,22 @@ ul
   box-shadow: 0 2px 4px rgba(100,100,100,.1);
 }
 
+@media (max-width: 38em)
+{
+	.card-first
+	{
+		padding: 10px;
+		margin: -140px auto 20px auto;
+		width: 90%;
+	}
+
+	.card-next
+	{
+		padding: 10px;
+		width: 90%;
+	}
+}
+
 /* Centralise the grid of icons sets */
 
 .center
