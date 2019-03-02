@@ -48,8 +48,8 @@
     (function configPaths() {
         // Set defaults for paths and setup
         H.dfltPaths = Object.create({
-            "maindir": "../javascript/",
-            "patterndir": "../javascript/patterns/"
+            "maindir": "../suru-plus-site/javascript/",
+            "patterndir": "../suru-plus-site/javascript/patterns/"
         });
         if (H.paths) {
             if (H.paths.patterndir) {
