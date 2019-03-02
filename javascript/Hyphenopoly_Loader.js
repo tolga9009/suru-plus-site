@@ -48,8 +48,8 @@
     (function configPaths() {
         // Set defaults for paths and setup
         H.dfltPaths = Object.create({
-            "maindir": "../Hyphenopoly/",
-            "patterndir": "../Hyphenopoly/patterns/"
+            "maindir": "../javascript/",
+            "patterndir": "../javascript/patterns/"
         });
         if (H.paths) {
             if (H.paths.patterndir) {
