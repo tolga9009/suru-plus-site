@@ -309,21 +309,6 @@ img
     image-rendering: optimizequality;
 }
 
-img.mint-folders
-{
-	width: 600px;
-}
-
-img.file-managers
-{
-	width: 290px;
-}
-
-img.steam-games
-{
-	width: 216px;
-}
-
 li 
 {
   hyphens: auto;
@@ -523,6 +508,27 @@ ul
 	margin-left: 24px;
 	padding: 6px;
 	width: auto;
+}
+
+.devices-icons
+{
+	border-radius: 24px;
+	width: 512px;
+}
+
+.file-managers
+{
+	width: 290px;
+}
+
+.mint-folders
+{
+	width: 600px;
+}
+
+.steam-games
+{
+	width: 216px;
 }
 
 /* Grid of icons sets */
@@ -796,7 +802,12 @@ transform: rotateY(180deg);
 		width: 90%;
 	}
 
-  .file-managers, .mint-folders, .steam-games
+	.devices-icons
+	{
+		border-radius: 12px;
+	}
+
+  .devices-icons, .file-managers, .mint-folders, .steam-games
 	{
 		width: 100%;
 	}
@@ -885,6 +896,11 @@ transform: rotateY(180deg);
 @media (max-width: 568px)
  /* screen and  */
 {
+	.devices-icons
+	{
+		border-radius: 19px;
+	}
+
   table 
 	{
     display: block;
@@ -931,9 +947,14 @@ transform: rotateY(180deg);
     content: "Code";
   }
 
-  table tbody tr td:nth-child(2):before 
+  table tbody tr td:nth-child(2):before
 	{
     content: "Blur";
+  }
+
+  table tbody tr td.alternative-icons:nth-child(2):before
+	{
+    content: "Alt 1";
   }
 
   table tbody tr td:nth-child(3):before 
@@ -941,20 +962,46 @@ transform: rotateY(180deg);
     content: "Drop shadow";
   }
 
+  table tbody tr td.alternative-icons:nth-child(3):before 
+	{
+    content: "Alt 2";
+  }
+
   table tbody tr td:nth-child(4):before 
 	{
     content: "Inner shadow";
+  }
+
+  table tbody tr td.alternative-icons:nth-child(4):before 
+	{
+    content: "Alt 3";
   }
 
   table tbody tr td:nth-child(5):before 
 	{
     content: "Box Type";
   }
+
+  table tbody tr td.alternative-icons:nth-child(5):before 
+	{
+    content: "Alt 4";
+  }
+
+  table tbody tr td.alternative-icons:nth-child(6):before 
+	{
+    content: "Alt 5";
+  }
 }
 
 @media (max-width: 440px) 
 {
   /* only screen and */
+
+	.devices-icons
+	{
+		border-radius: 14px;
+	}
+
  .grid 
  {
   text-align: center
