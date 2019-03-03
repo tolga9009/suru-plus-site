@@ -191,15 +191,6 @@ details
 	padding: 6px 24px;
 }
 
-@media (max-width: 38em)
-{
-	details
-	{
-		border-radius: 0px;
-		max-width: 100%;
-	}
-}
-
 details summary
 {
 	background-image: var(--css-tricks-top);
@@ -333,14 +324,6 @@ img.steam-games
 	width: 216px;
 }
 
-@media (max-width: 38em)
-{
-	.file-managers, .mint-folders, .steam-games
-	{
-		width: 100%;
-	}
-}
-
 li 
 {
   hyphens: auto;
@@ -458,75 +441,6 @@ table td.r, table th.r
   text-align: center;
 }
 
-@media screen and (max-width: 35.5em) 
-{
-  table 
-	{
-    display: block;
-  }
-
-  table > *, table tr, table td, table th 
-	{
-    display: block;
-  }
-
-  table thead 
-	{
-    display: none;
-  }
-
-  table tbody tr 
-	{
-    height: auto;
-    padding: 8px 0;
-  }
-
-  table tbody tr td 
-	{
-    margin-bottom: 12px;
-    padding-left: 45%;
-  }
-
-  table tbody tr td:last-child 
-	{
-    margin-bottom: 0;
-  }
-
-  table tbody tr td:before 
-	{
-    font-weight: 700;
-    left: 10px;
-    position: absolute;
-    top: 0;
-    width: 40%;
-  }
-
-  table tbody tr td:nth-child(1):before 
-	{
-    content: "Code";
-  }
-
-  table tbody tr td:nth-child(2):before 
-	{
-    content: "Blur";
-  }
-
-  table tbody tr td:nth-child(3):before 
-	{
-    content: "Drop shadow";
-  }
-
-  table tbody tr td:nth-child(4):before 
-	{
-    content: "Inner shadow";
-  }
-
-  table tbody tr td:nth-child(5):before 
-	{
-    content: "Box Type";
-  }
-}
-
 ul 
 {
   list-style: none;
@@ -567,22 +481,6 @@ ul
   width: 800px;
   margin: 20px auto 0px auto;
   box-shadow: 0 2px 4px rgba(100,100,100,.1);
-}
-
-@media (max-width: 38em)
-{
-	.card-first
-	{
-		padding: 10px;
-		margin: -140px auto 20px auto;
-		width: 90%;
-	}
-
-	.card-next
-	{
-		padding: 10px;
-		width: 90%;
-	}
 }
 
 /* Centralise the grid of icons sets */
@@ -693,59 +591,6 @@ ul
     vertical-align: middle;
 }
 
-@media only screen and (max-width: 848px) 
-{
- .grid 
- {
-  text-align: center
- }
-}
-
-@media only screen and (max-width: 440px) 
-{
- .grid 
- {
-  text-align: center
- }
-
- .grid li 
- {
-  background: transparent;
-  border-radius: 0;
-	border: none;
-  box-shadow: none;
-  height: 345px;
-  margin: 12px 0;
-  max-width: 345px;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%
- }
-
- .grid li:after 
- {
-  border: none;
-  color: var(--papirus-dark);
-  content:"◆";
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  line-height: 64px;
-  width: 100%;
- }
-
- .grid li:last-child:after 
- {
-  content:""
- }
-
- .grid li:focus, ul.grid li:hover 
- {
-  box-shadow: none;
-  background: transparent
- }
-}
-
 .long-list
 {
 	columns: 2;
@@ -763,16 +608,6 @@ ul
 .long-list li, .very-long-list li
 {
 	text-align: left;
-}
-
-@media (max-width: 38em)
-{
-	.long-list, .very-long-list
-	{
-		columns: 1;
-		-webkit-columns: 1;
-		-moz-columns: 1;
-	}
 }
 
 /* Grid of colours sets */
@@ -844,14 +679,6 @@ transform: rotateY(180deg);
 .title_back
 {
 	background: var(--papirus);
-}
-
-.wrapper 
-{
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 48px;
 }
 
 /* Footer */
@@ -934,16 +761,54 @@ transform: rotateY(180deg);
   -webkit-text-fill-color: transparent;
 }
 
-#top 
+#wrapper 
 {
-	background: var(--papirus-light);
-	height: 100%;
 	margin: 0 auto;
 }
 
-@media (max-width: 38em) 
+@media (max-width: 848px) 
+/* only screen and  */
 {
-	.title
+ .grid 
+ {
+  text-align: center
+ }
+}
+
+@media (max-width: 608px)
+{
+	details
+	{
+		border-radius: 0px;
+		max-width: 100%;
+	}
+
+  .card-first
+	{
+		padding: 10px;
+		margin: -140px auto 20px auto;
+		width: 90%;
+	}
+
+	.card-next
+	{
+		padding: 10px;
+		width: 90%;
+	}
+
+  .file-managers, .mint-folders, .steam-games
+	{
+		width: 100%;
+	}
+
+  .long-list, .very-long-list
+	{
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+	}
+
+  .title
 	{
 		padding-right: 2em;
 		text-align: left;
@@ -1005,17 +870,135 @@ transform: rotateY(180deg);
 	{
 		margin: 0;
 	}
+
 	#menuShowHide:checked + label:before 
 	{
 		content: "Hide Menu";
 	}
+
 	#menuShowHide:checked ~ #mainMenu 
 	{
 		display: block;
 	}
 }
 
-@media (max-width: 18em) 
+@media (max-width: 568px)
+ /* screen and  */
+{
+  table 
+	{
+    display: block;
+  }
+
+  table > *, table tr, table td, table th 
+	{
+    display: block;
+  }
+
+  table thead 
+	{
+    display: none;
+  }
+
+  table tbody tr 
+	{
+    height: auto;
+    padding: 8px 0;
+  }
+
+  table tbody tr td 
+	{
+    margin-bottom: 12px;
+    padding-left: 45%;
+  }
+
+  table tbody tr td:last-child 
+	{
+    margin-bottom: 0;
+  }
+
+  table tbody tr td:before 
+	{
+    font-weight: 700;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 40%;
+  }
+
+  table tbody tr td:nth-child(1):before 
+	{
+    content: "Code";
+  }
+
+  table tbody tr td:nth-child(2):before 
+	{
+    content: "Blur";
+  }
+
+  table tbody tr td:nth-child(3):before 
+	{
+    content: "Drop shadow";
+  }
+
+  table tbody tr td:nth-child(4):before 
+	{
+    content: "Inner shadow";
+  }
+
+  table tbody tr td:nth-child(5):before 
+	{
+    content: "Box Type";
+  }
+}
+
+@media (max-width: 440px) 
+{
+  /* only screen and */
+ .grid 
+ {
+  text-align: center
+ }
+
+ .grid li 
+ {
+  background: transparent;
+  border-radius: 0;
+	border: none;
+  box-shadow: none;
+  height: 345px;
+  margin: 12px 0;
+  max-width: 345px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%
+ }
+
+ .grid li:after 
+ {
+  border: none;
+  color: var(--papirus-dark);
+  content:"◆";
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  line-height: 64px;
+  width: 100%;
+ }
+
+ .grid li:last-child:after 
+ {
+  content:""
+ }
+
+ .grid li:focus, ul.grid li:hover 
+ {
+  box-shadow: none;
+  background: transparent
+ }
+}
+
+@media (max-width: 288px) 
 {
 	#mainMenu li 
 	{
