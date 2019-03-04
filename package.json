@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/suru-plus/suru-plus-site#readme",
   "dependencies": {
-    "hyphenopoly": "^2.8.0"
+    "hyphenopoly": "^2.8.0",
+    "mathjax": "^2.7.5",
+    "mj3-demos": "git+https://github.com/mathjax/mj3-demos.git"
   }
 }
