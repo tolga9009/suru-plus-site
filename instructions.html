@@ -96,7 +96,17 @@
 		<link rel="stylesheet" href="css/screen.css" media="screen">
 		<link rel="stylesheet" href="css/suru-plus.css">
 		<title>Suru++ – Instructions</title>
-		<script src="javascript/hotjar.js"></script>
+		<!-- Hotjar Tracking Code for https://suru-plus.github.io/suru-plus-site -->
+		<script>
+			(function (h, o, t, j, a, r) {
+				h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+				h._hjSettings = { hjid: 416900, hjsv: 6 };
+				a = o.getElementsByTagName('head')[0];
+				r = o.createElement('script'); r.async = 1;
+				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+		</script>
 		<script src="javascript/Hyphenopoly_Loader.js"></script>
 		<script src="javascript/hyphenisation.js"></script>
 	</head>
@@ -119,7 +129,7 @@
 		<details>
 			<summary>Suru++25</summary>
 
-			<p>Click one of contens in the index.</p>
+			<p>Click one of content in the index.</p>
 
 			<ul>
 				<li><a href="#installing-with-cli">Installing with CLI</a>
@@ -172,52 +182,52 @@
 		<details>
 			<summary>Suru++25 Dark</summary>
 
-			<p>Click one of contens in the index.</p>
+			<p>Click one of content in the index.</p>
 			
 			<ul>
-				<li><a href="#installing-with-cli">Installing with CLI</a>
+				<li><a href="#installing-with-cli-dark">Installing with CLI</a>
 					<ul>
-						<li><a href="#root-directory-recommended">ROOT directory (recommended)</a></li>
-						<li><a href="#home-directory-for-gtk">HOME directory for GTK</a></li>
-						<li><a href="#home-directory-for-kde">HOME directory for KDE</a></li>
-						<li><a href="#bsd-systems">*BSD systems</a></li>
-						<li><a href="#uninstall">Uninstall</a></li>
+						<li><a href="#root-directory-recommended-dark">ROOT directory (recommended)</a></li>
+						<li><a href="#home-directory-for-gtk-dark">HOME directory for GTK</a></li>
+						<li><a href="#home-directory-for-kde-dark">HOME directory for KDE</a></li>
+						<li><a href="#bsd-systems-dark">*BSD systems</a></li>
+						<li><a href="#uninstall-dark">Uninstall</a></li>
 					</ul>
 				</li>
-				<li><a href="#arch-linux-and-arch-based-distributions">Arch Linux and Arch-based distributions</a></li>
+				<li><a href="#arch-linux-and-arch-based-distributions-dark">Arch Linux and Arch-based distributions</a></li>
 			</ul>
 
-			<h3 id="installing-with-cli">Installing with CLI</h3>
+			<h3 id="installing-with-cli-dark">Installing with CLI</h3>
 
 			<p>Use the scripts to install the latest version directly from this repo (independently of your distro):</p>
 			<p><strong>NOTE:</strong> Use the same command to update the icon theme.</p>
 
-		<h4 id="root-directory-recommended">ROOT directory (recommended)</h4>
+		<h4 id="root-directory-recommended-dark">ROOT directory (recommended)</h4>
 
 <pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | sh
 </code></pre>
 
-		<h4 id="home-directory-for-gtk">HOME directory for GTK</h4>
+		<h4 id="home-directory-for-gtk-dark">HOME directory for GTK</h4>
 
 <pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | env DESTDIR=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.icons"</span> sh
 </code></pre>
 
-		<h4 id="home-directory-for-kde">HOME directory for KDE</h4>
+		<h4 id="home-directory-for-kde-dark">HOME directory for KDE</h4>
 
 <pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | env DESTDIR=<span class="hljs-string">"<span class="hljs-variable">$HOME</span>/.local/share/icons"</span> sh
 </code></pre>
 
-		<h4 id="bsd-systems">*BSD systems</h4>
+		<h4 id="bsd-systems-dark">*BSD systems</h4>
 
 <pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | env DESTDIR=<span class="hljs-string">"/usr/local/share/icons"</span> sh
 </code></pre>
 
-		<h4 id="uninstall">Uninstall</h4>
+		<h4 id="uninstall-dark">Uninstall</h4>
 
 <pre class="hljs hljs-settings"><code class="language-bash">wget -qO- https://raw.githubusercontent.com/suru-plus/suru-plus-dark/master/install.sh | env uninstall=<span class="hljs-literal">true</span> sh
 </code></pre>
 
-    <h3 id="arch-linux-and-arch-based-distributions">Arch Linux and Arch-based distributions</h3>
+    <h3 id="arch-linux-and-arch-based-distributions-dark">Arch Linux and Arch-based distributions</h3>
 <pre class="hljs hljs-settings"><code class="language-bash">yay -S suru-plus-dark-git
 </code></pre>
 		</details>

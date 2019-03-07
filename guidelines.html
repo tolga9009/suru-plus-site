@@ -94,8 +94,19 @@
 
 		<!-- CSS files -->
 		<link rel="stylesheet" href="css/screen.css" media="screen">
+		<link rel="stylesheet" href="css/suru-plus.css" media="screen">
 		<title>Suru++ – Design Guidelines</title>
-		<script src="javascript/hotjar.js"></script>
+		<!-- Hotjar Tracking Code for https://suru-plus.github.io/suru-plus-site -->
+		<script>
+			(function (h, o, t, j, a, r) {
+				h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+				h._hjSettings = { hjid: 416900, hjsv: 6 };
+				a = o.getElementsByTagName('head')[0];
+				r = o.createElement('script'); r.async = 1;
+				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+		</script>
 		<script src="javascript/Hyphenopoly_Loader.js"></script>
 		<script src="javascript/hyphenisation.js"></script>
 	</head>
@@ -146,6 +157,8 @@
 								<li><a href="#submitting-the-pull-request">Submitting the pull request</a></li>
 								<li><a href="#reviews">Reviews</a></li>
 								<li><a href="#merging">Merging</a></li>
+								<li><a href="#tip">Tip</a></li>
+								<li><a href="#toolkit">Toolkit</a></li>
 						</ul>
 				</li>
 		</ul>
@@ -160,11 +173,17 @@
 
 		<h4 id="fork-and-clone">Fork and Clone</h4>
 
-		<p lang="en-gb">Fork our repository and create a clone to your personal system.</p>
+		<p lang="en-gb">Fork our repository at GitHub and run:</p>
+
+<pre class="hljs" ><code><span class="hljs-meta">git</span> clone <span class="hljs-keyword" style="text-decoration: underline">https://github.com/your_username/suru-plus</span>
+<span class="hljs-meta">cd</span> suru-plus</code></pre>
 		
 		<h4 id="branches">Branches</h4>
 
-		<p lang="en-gb">After forking our repository, create one branch per bugs or per files or per icons on your personal repository.</p>
+		<p lang="en-gb">After forking our repository, create one branch per bugs or per files or per icons on your personal repository:</p>
+
+<pre class="hljs" ><code><span class="hljs-meta">git</span> checkout -b new_icons
+<span class="hljs-meta">git</span> push origin new_icons</code></pre>
 
 		<p lang="en-gb">The branch name should describe the bug or version ("<code>alpha</code>" or "<code>beta</code>" or "<code>new-icons</code>" or "<code>unstable</code>" or "<code>beta-emergency</code>" or "<code>unstable-emergency</code>"). It should start with the bug or version number, and include a very short description of the bug, or a short version of the bug's title.</p>
 
@@ -314,11 +333,24 @@
 			<li lang="en-gb">"Improved ##nn" if it is an improvement of a file or an icon</li>
 		</ul>
 
+		<p>For example, run like:</p>
+
+<pre class="hljs" ><code><span class="hljs-meta">git</span> add .
+<span class="hljs-meta">git</span> commit -m <span class="hljs-quote">"Added new icons"</span>
+<span class="hljs-meta">git</span> push
+<span class="hljs-quote"># Type your username and your password</span></code></pre>
+
 		<p lang="en-gb">It eases skimming history later. For this reason, the first line will tend to be longer than the 50 chars suggested in that article, aim to keep it less than 72 chars.</p>
 
 		<h3 id="submitting-the-pull-request">Submitting the pull request</h3>
 
 		<p>When you submit a pull request, please use the description field to explain in words the overall intention of your changes. A few sentences should be plenty. It is also OK to reuse the commit message, if you included a lot of discussion there.</p>
+
+		<ul>
+			<li>Open the Github site and go to your repository.</li>
+			<li>Click "Branch: master" and switch to "new_icons"</li>
+			<li>Create a pull request and select "suru-plus:beta". Ready.</li>
+		</ul>
 
 		<p>At this point you are waiting on us. We like to at least comment on pull requests within among one and three days. We may suggest some changes or improvements or alternatives.</p>
 
@@ -329,6 +361,24 @@
 		<h3 id="merging">Merging</h3>
 
 		<p lang="en-gb">When a pull request has passed review, the reviewer generally merges.</p>
+
+		<p>Remember that, once I approve, you need to delete the branch.</p>
+
+		<h3 id="tip">Tip</h3>
+
+		<p lang="en-gb">You do not need to remove and fork every time, you can delete only the branches you created.</p>
+		<p lang="en-gb">When I upgrade something in my repository, you need to switch from the deleted branch to the branch <code>master</code>:</p>
+
+<pre class="hljs" ><code><span class="hljs-meta">cd</span> suru-plus
+<span class="hljs-meta">git</span> fetch origin
+<span class="hljs-meta">git</span> checkout master
+<span class="hljs-meta">git</span> remote add upstream <span class="hljs-keyword" style="text-decoration: underline">https://github.com/suru-plus/suru-plus</span>
+<span class="hljs-meta">git</span> pull upstream master 
+<span class="hljs-meta">git</span> add .
+<span class="hljs-meta">git</span> push</code></pre>
+
+		<h3 id="toolkit">Toolkit</h3>
+		<p lang="en-gb">You can find templates and palettes in the folder <code>templates</code> at Suru++ repository.</p>
 	
 		<div id="footer">
 			© 2019 Suru++ by Suru++ Project and Andrea Bonanni<br/>

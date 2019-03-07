@@ -93,3 +93,9 @@ Original theme - Ocean Dark Theme – by https://github.com/gavsiu
 {
   font-weight: bold;
 }
+
+pre
+{
+ margin: 15px auto; 
+ max-width: 90%;
+}
